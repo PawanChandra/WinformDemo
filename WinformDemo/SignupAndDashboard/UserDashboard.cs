@@ -20,22 +20,25 @@ namespace WinformDemo
 
         private void UserDashboard_Load(object sender, EventArgs e)
         {
-            string _username=UserSignup.Username;
-            if (_username == string.Empty)
+            string? username = UserSignup.Username;
+            if (string.IsNullOrEmpty(username))
             {
-                this.Hide();
-                UserSignup userSignup = new UserSignup();
-                userSignup.ShowDialog();
+                OpenUserSignup();
+                return;
             }
+
             lblWelcomeMessage.Visible = true;
-            lblWelcomeMessage.Text = "Hi, "+_username+" welcome to the dashboard";
+            lblWelcomeMessage.Text = $"Hi, {username} welcome to the dashboard";
         }
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            UserSignup userSignup = new UserSignup();
-            userSignup.ShowDialog();
-            DialogResult= DialogResult.Abort;
+            OpenUserSignup();
+        }
+
+        private void OpenUserSignup()
+        {
+            Hide();
+            new UserSignup().ShowDialog();
         }
     }
 }

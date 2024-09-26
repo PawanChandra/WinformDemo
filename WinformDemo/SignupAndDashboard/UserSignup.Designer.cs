@@ -41,6 +41,8 @@
             chkDeclaration = new CheckBox();
             btnSave = new Button();
             btnCancel = new Button();
+            label1 = new Label();
+            linkLblLoginHere = new LinkLabel();
             SuspendLayout();
             // 
             // lblSignUp
@@ -48,6 +50,7 @@
             lblSignUp.AutoSize = true;
             lblSignUp.BackColor = Color.Transparent;
             lblSignUp.Font = new Font("Impact", 25F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            lblSignUp.ForeColor = SystemColors.MenuHighlight;
             lblSignUp.Location = new Point(439, 23);
             lblSignUp.Name = "lblSignUp";
             lblSignUp.Size = new Size(144, 52);
@@ -59,6 +62,7 @@
             lblUsername.AutoSize = true;
             lblUsername.BackColor = Color.Transparent;
             lblUsername.Font = new Font("Impact", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUsername.ForeColor = Color.MediumPurple;
             lblUsername.Location = new Point(323, 124);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(114, 29);
@@ -70,6 +74,7 @@
             lblEmail.AutoSize = true;
             lblEmail.BackColor = Color.Transparent;
             lblEmail.Font = new Font("Impact", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblEmail.ForeColor = Color.MediumPurple;
             lblEmail.Location = new Point(323, 179);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(66, 29);
@@ -119,6 +124,7 @@
             lblPassword.AutoSize = true;
             lblPassword.BackColor = Color.Transparent;
             lblPassword.Font = new Font("Impact", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPassword.ForeColor = Color.MediumPurple;
             lblPassword.Location = new Point(323, 234);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(107, 29);
@@ -130,8 +136,8 @@
             lblCPassword.AutoSize = true;
             lblCPassword.BackColor = Color.Transparent;
             lblCPassword.Font = new Font("Impact", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCPassword.ForeColor = SystemColors.ButtonFace;
-            lblCPassword.Location = new Point(323, 292);
+            lblCPassword.ForeColor = Color.MediumPurple;
+            lblCPassword.Location = new Point(323, 287);
             lblCPassword.Name = "lblCPassword";
             lblCPassword.Size = new Size(190, 29);
             lblCPassword.TabIndex = 8;
@@ -141,17 +147,19 @@
             // 
             chkDeclaration.AutoSize = true;
             chkDeclaration.BackColor = Color.Transparent;
-            chkDeclaration.Font = new Font("Impact", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chkDeclaration.Cursor = Cursors.Hand;
+            chkDeclaration.Font = new Font("Impact", 7.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chkDeclaration.ForeColor = Color.MediumPurple;
             chkDeclaration.Location = new Point(519, 335);
             chkDeclaration.Name = "chkDeclaration";
-            chkDeclaration.Size = new Size(201, 27);
+            chkDeclaration.Size = new Size(409, 21);
             chkDeclaration.TabIndex = 9;
-            chkDeclaration.Text = "Terms and conditions";
+            chkDeclaration.Text = "I acknowledge that I have read and agree to the Terms and Conditions.";
             chkDeclaration.UseVisualStyleBackColor = false;
             // 
             // btnSave
             // 
-            btnSave.BackColor = SystemColors.MenuHighlight;
+            btnSave.BackColor = Color.MediumPurple;
             btnSave.Cursor = Cursors.Hand;
             btnSave.Font = new Font("Impact", 14F);
             btnSave.ForeColor = SystemColors.Control;
@@ -177,6 +185,36 @@
             btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Franklin Gothic Medium", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.MediumPurple;
+            label1.Location = new Point(523, 472);
+            label1.Name = "label1";
+            label1.Size = new Size(200, 21);
+            label1.TabIndex = 12;
+            label1.Text = "Already have an account ?";
+            // 
+            // linkLblLoginHere
+            // 
+            linkLblLoginHere.AutoSize = true;
+            linkLblLoginHere.BackColor = Color.Transparent;
+            linkLblLoginHere.Cursor = Cursors.Hand;
+            linkLblLoginHere.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            linkLblLoginHere.ForeColor = Color.MediumPurple;
+            linkLblLoginHere.LinkBehavior = LinkBehavior.NeverUnderline;
+            linkLblLoginHere.LinkColor = Color.MediumPurple;
+            linkLblLoginHere.Location = new Point(718, 472);
+            linkLblLoginHere.Name = "linkLblLoginHere";
+            linkLblLoginHere.Size = new Size(43, 19);
+            linkLblLoginHere.TabIndex = 13;
+            linkLblLoginHere.TabStop = true;
+            linkLblLoginHere.Text = "Login";
+            linkLblLoginHere.VisitedLinkColor = Color.Transparent;
+            linkLblLoginHere.LinkClicked += linkLblLoginHere_LinkClicked;
+            // 
             // UserSignup
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -185,6 +223,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1028, 528);
+            Controls.Add(linkLblLoginHere);
+            Controls.Add(label1);
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
             Controls.Add(chkDeclaration);
@@ -220,5 +260,7 @@
         private CheckBox chkDeclaration;
         private Button btnSave;
         private Button btnCancel;
+        private Label label1;
+        private LinkLabel linkLblLoginHere;
     }
 }

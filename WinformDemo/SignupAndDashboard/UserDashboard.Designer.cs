@@ -71,13 +71,13 @@
             btnLogout.TabIndex = 2;
             btnLogout.Tag = "Logout";
             btnLogout.UseVisualStyleBackColor = false;
-            btnLogout.Click += this.btnLogout_Click;
+            btnLogout.Click += btnLogout_Click;
             // 
             // UserDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlLightLight;
+            BackColor = SystemColors.Window;
             ClientSize = new Size(800, 450);
             Controls.Add(btnLogout);
             Controls.Add(lblWelcomeMessage);
