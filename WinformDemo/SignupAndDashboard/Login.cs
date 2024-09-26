@@ -21,7 +21,7 @@ namespace WinformDemos.SignupAndDashboard
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text.Trim() !=string.Empty && txtPassword.Text.Trim() != string.Empty && )
+            if(txtUsername.Text.Trim() !=string.Empty && txtPassword.Text.Trim() != string.Empty)
             {
                 if(txtPassword.Text.Trim() == password && txtUsername.Text.Trim() == username)
                 {
