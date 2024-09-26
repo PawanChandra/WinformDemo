@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             txtUsername = new TextBox();
             txtPassword = new TextBox();
-            button1 = new Button();
+            btnLogin = new Button();
             chkRemember = new CheckBox();
             pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -60,18 +60,19 @@
             txtPassword.TabIndex = 4;
             txtPassword.UseSystemPasswordChar = true;
             // 
-            // button1
+            // btnLogin
             // 
-            button1.BackColor = SystemColors.MenuHighlight;
-            button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Javanese Text", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.Window;
-            button1.Location = new Point(184, 349);
-            button1.Name = "button1";
-            button1.Size = new Size(129, 53);
-            button1.TabIndex = 5;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
+            btnLogin.BackColor = SystemColors.MenuHighlight;
+            btnLogin.Cursor = Cursors.Hand;
+            btnLogin.Font = new Font("Javanese Text", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = SystemColors.Window;
+            btnLogin.Location = new Point(184, 349);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(129, 53);
+            btnLogin.TabIndex = 5;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // chkRemember
             // 
@@ -106,7 +107,7 @@
             ClientSize = new Size(698, 474);
             Controls.Add(pictureBox2);
             Controls.Add(chkRemember);
-            Controls.Add(button1);
+            Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
             ForeColor = SystemColors.Window;
@@ -120,7 +121,7 @@
         #endregion
         private TextBox txtUsername;
         private TextBox txtPassword;
-        private Button button1;
+        private Button btnLogin;
         private CheckBox chkRemember;
         private PictureBox pictureBox2;
     }
