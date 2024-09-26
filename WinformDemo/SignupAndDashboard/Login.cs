@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinformDemo;
 
 namespace WinformDemos.SignupAndDashboard
 {
@@ -15,6 +16,12 @@ namespace WinformDemos.SignupAndDashboard
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void linkLblSignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            new UserSignup().ShowDialog();
         }
     }
 }

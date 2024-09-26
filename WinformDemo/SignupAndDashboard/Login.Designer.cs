@@ -34,6 +34,8 @@
             button1 = new Button();
             chkRemember = new CheckBox();
             pictureBox2 = new PictureBox();
+            linkLblSignup = new LinkLabel();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -97,6 +99,30 @@
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
             // 
+            // linkLblSignup
+            // 
+            linkLblSignup.AutoSize = true;
+            linkLblSignup.Cursor = Cursors.Hand;
+            linkLblSignup.Font = new Font("Javanese Text", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            linkLblSignup.LinkBehavior = LinkBehavior.NeverUnderline;
+            linkLblSignup.Location = new Point(356, 416);
+            linkLblSignup.Name = "linkLblSignup";
+            linkLblSignup.Size = new Size(67, 38);
+            linkLblSignup.TabIndex = 9;
+            linkLblSignup.TabStop = true;
+            linkLblSignup.Text = "Signup";
+            linkLblSignup.LinkClicked += linkLblSignup_LinkClicked;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = SystemColors.Highlight;
+            label1.Location = new Point(191, 422);
+            label1.Name = "label1";
+            label1.Size = new Size(167, 20);
+            label1.TabIndex = 10;
+            label1.Text = "Don't have an account ?";
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -104,6 +130,8 @@
             BackColor = SystemColors.Window;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(698, 474);
+            Controls.Add(label1);
+            Controls.Add(linkLblSignup);
             Controls.Add(pictureBox2);
             Controls.Add(chkRemember);
             Controls.Add(button1);
@@ -123,5 +151,7 @@
         private Button button1;
         private CheckBox chkRemember;
         private PictureBox pictureBox2;
+        private LinkLabel linkLblSignup;
+        private Label label1;
     }
 }
