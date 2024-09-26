@@ -1,3 +1,4 @@
+using WinformDemos.Ouath;
 using WinformDemos.SignupAndDashboard;
 
 namespace WinformDemo
@@ -11,7 +12,7 @@ namespace WinformDemo
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new UserSignup());
+            Application.Run(new OauthLogin());
         }
     }
 }
