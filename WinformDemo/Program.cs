@@ -1,3 +1,5 @@
+using WinformDemos.SignupAndDashboard;
+
 namespace WinformDemo
 {
     internal static class Program

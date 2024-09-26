@@ -1,4 +1,6 @@
 ﻿
+using WinformDemos.SignupAndDashboard;
+
 namespace WinformDemo
 {
     public partial class UserSignup : Form
@@ -71,6 +73,12 @@ namespace WinformDemo
         private void ShowWarning(string message)
         {
             MessageBox.Show(message, "Warning", MessageBoxButtons.OK);
+        }
+
+        private void linkLblLoginHere_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            new Login().ShowDialog();
         }
     }
 }

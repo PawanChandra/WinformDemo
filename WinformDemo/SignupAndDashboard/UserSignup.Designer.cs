@@ -41,6 +41,8 @@
             chkDeclaration = new CheckBox();
             btnSave = new Button();
             btnCancel = new Button();
+            label1 = new Label();
+            linkLblLoginHere = new LinkLabel();
             SuspendLayout();
             // 
             // lblSignUp
@@ -183,6 +185,36 @@
             btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Franklin Gothic Medium", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.MediumPurple;
+            label1.Location = new Point(523, 472);
+            label1.Name = "label1";
+            label1.Size = new Size(200, 21);
+            label1.TabIndex = 12;
+            label1.Text = "Already have an account ?";
+            // 
+            // linkLblLoginHere
+            // 
+            linkLblLoginHere.AutoSize = true;
+            linkLblLoginHere.BackColor = Color.Transparent;
+            linkLblLoginHere.Cursor = Cursors.Hand;
+            linkLblLoginHere.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            linkLblLoginHere.ForeColor = Color.MediumPurple;
+            linkLblLoginHere.LinkBehavior = LinkBehavior.NeverUnderline;
+            linkLblLoginHere.LinkColor = Color.MediumPurple;
+            linkLblLoginHere.Location = new Point(718, 472);
+            linkLblLoginHere.Name = "linkLblLoginHere";
+            linkLblLoginHere.Size = new Size(43, 19);
+            linkLblLoginHere.TabIndex = 13;
+            linkLblLoginHere.TabStop = true;
+            linkLblLoginHere.Text = "Login";
+            linkLblLoginHere.VisitedLinkColor = Color.Transparent;
+            linkLblLoginHere.LinkClicked += linkLblLoginHere_LinkClicked;
+            // 
             // UserSignup
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -191,6 +223,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1028, 528);
+            Controls.Add(linkLblLoginHere);
+            Controls.Add(label1);
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
             Controls.Add(chkDeclaration);
@@ -226,5 +260,7 @@
         private CheckBox chkDeclaration;
         private Button btnSave;
         private Button btnCancel;
+        private Label label1;
+        private LinkLabel linkLblLoginHere;
     }
 }
